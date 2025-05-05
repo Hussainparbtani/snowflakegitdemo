@@ -1,0 +1,11 @@
+USE ROLE SYSADMIN;
+
+-- Warehouse for BI Tool (Multi-Cluster)
+CREATE OR ALTER WAREHOUSE bi_tool_wh
+  WAREHOUSE_SIZE = XSMALL
+  MIN_CLUSTER_COUNT = 1
+  MAX_CLUSTER_COUNT = 10 -- Adjust as needed
+  SCALING_POLICY = STANDARD -- Or STANDARD
+  AUTO_SUSPEND = 300 -- Suspend after 5 minutes of inactivity
+  AUTO_RESUME = TRUE
+  INITIALLY_SUSPENDED = TRUE;
