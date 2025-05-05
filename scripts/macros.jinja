@@ -1,3 +1,5 @@
+--!jinja
+
 {%- macro get_environments(deployment_type) -%}
   {%- if deployment_type == 'prod' -%}
     {{ "prod1,prod2" }}
