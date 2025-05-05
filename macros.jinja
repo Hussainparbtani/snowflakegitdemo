@@ -1,0 +1,7 @@
+{%- macro get_environments(deployment_type) -%}
+  {%- if deployment_type == 'prod' -%}
+    {{ "prod1,prod2" }}
+  {%- else -%}
+    {{ "dev,qa,staging" }}
+  {%- endif -%}
+{%- endmacro -%}
